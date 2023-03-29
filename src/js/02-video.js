@@ -8,10 +8,6 @@ const currentTime = localStorage.getItem(STORAGE_KEY)
   ? localStorage.getItem(STORAGE_KEY)
   : 0;
 
-// player.on('play', function () {
-//   console.log('played the video!');
-// });
-
 const saveTimeVideo = event => {
   localStorage.setItem(STORAGE_KEY, event.seconds);
 };
