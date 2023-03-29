@@ -1,16 +1,16 @@
-import throttle from "lodash.throttle";
+import throttle from 'lodash.throttle';
 
-const formEl = document.querySelector(".feedback-form");
+const formEl = document.querySelector('.feedback-form');
 
-const STORAGE_KEY = "feedback-form-state";
+const STORAGE_KEY = 'feedback-form-state';
 let formData = {};
 
-formEl.addEventListener("submit", handleSubmit);
-formEl.addEventListener("input", throttle(saveValueForm, 500));
+formEl.addEventListener('submit', formSubmit);
+formEl.addEventListener('input', throttle(saveValueForm, 500));
 
 updateValueForm();
 
-function handleSubmit(event) {
+function formSubmit(event) {
   event.preventDefault();
 
   const { email, message } = event.currentTarget;
