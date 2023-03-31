@@ -19,6 +19,7 @@ function formSubmit(event) {
   console.log(valueInput);
   event.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
+  formData = {};
 }
 
 function saveValueForm(event) {
